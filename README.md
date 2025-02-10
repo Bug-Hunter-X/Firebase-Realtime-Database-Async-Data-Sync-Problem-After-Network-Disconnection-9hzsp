@@ -1,0 +1,3 @@
+# Firebase Realtime Database: Asynchronous Data Sync Issue
+
+This repository demonstrates a subtle bug related to asynchronous data synchronization in Firebase's Realtime Database. The issue manifests when a network interruption occurs, followed by reconnection.  Even with `.onDisconnect()` methods, data inconsistencies may arise due to mishandled asynchronous events during the reconnect phase. The bug is characterized by a lack of explicit errors, making it difficult to detect and debug.  The solution focuses on more robust error handling and event management during connection changes. 
